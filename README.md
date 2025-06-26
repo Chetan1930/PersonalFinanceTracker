@@ -1,12 +1,97 @@
-# React + Vite
+````md
+# 💰 Personal Finance Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Track your income and expenses with ease! This is a simple yet powerful React-based Personal Finance Tracker that supports dark/light mode, transaction history, filtering, and Indian currency formatting.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🔗 Live Demo
 
-## Expanding the ESLint configuration
+👉 [Visit the App](https://chetanexpense.netlify.app/)  
+🔗 [GitHub Repository](https://github.com/Chetan1930/PersonalFinanceTracker)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## ✨ Features
+
+- ✅ Add income and expense transactions
+- ✅ Automatic balance calculation
+- ✅ Filter by income/expense or search by text
+- ✅ Delete transactions
+- ✅ Responsive UI with Tailwind CSS
+- ✅ Dark & Light mode toggle
+- ✅ Indian currency format (e.g., ₹1,00,000)
+- ✅ Persistent data using `localStorage`
+
+---
+
+## 🛠️ Built With
+
+- [React](https://reactjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Vite](https://vitejs.dev/) (optional if you added it)
+- `Intl.NumberFormat` for Indian currency formatting
+
+---
+
+## 📦 Getting Started
+
+### 🔧 Clone & Run Locally
+
+```bash
+git clone https://github.com/Chetan1930/PersonalFinanceTracker.git
+cd PersonalFinanceTracker
+npm install
+npm run dev
+````
+
+### 🧪 Build for Production
+
+```bash
+npm run build
+```
+
+---
+
+## 📁 Folder Structure
+
+```
+src/
+│
+├── App.jsx            # Main component
+├── index.css          # TailwindCSS
+├── main.jsx
+└── components/        # (Optional) UI split into sub-components
+```
+
+---
+
+## 🧠 Learnings
+
+This project helped reinforce core React concepts:
+
+* `useState`, `useEffect`
+* Controlled components
+* Context API (optional future upgrade)
+* List rendering with `.map()`
+* State-based filtering
+* DOM updates and conditional styling
+* Tailwind theming & dark mode
+
+---
+
+## 📜 License
+
+This project is open-source and free to use.
+
+---
+
+## 🙌 Acknowledgements
+
+Thanks to the open-source community and tutorials that inspired this build!
+
+---
+
+Made with ❤️ by [@Chetan1930](https://github.com/Chetan1930)
+
+```
+
