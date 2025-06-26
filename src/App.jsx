@@ -66,29 +66,56 @@ function App() {
   }
 
   function formatCurrency(amount) {
-  return new Intl.NumberFormat("en-IN", {
-    style: "currency",
-    currency: "INR",
-    maximumFractionDigits:2,
-  }).format(amount);
-}
+    return new Intl.NumberFormat("en-IN", {
+      style: "currency",
+      currency: "INR",
+      maximumFractionDigits: 2,
+    }).format(amount);
+  }
+
+  const [theme, setTheme] = useState(() => {
+  return localStorage.getItem("theme") || "light";
+});
+
+useEffect(() => {
+  const root = window.document.documentElement;
+  if (theme === "dark") {
+    root.classList.add("dark");
+  } else {
+    root.classList.remove("dark");
+  }
+  localStorage.setItem("theme", theme);
+}, [theme]);
+
+const toggleTheme = () => {
+  setTheme(theme === "light" ? "dark" : "light");
+};
 
 
   return (
     <div className="min-h-screen bg-gray-100 flex flex-col items-center p-8 font-sans">
+      <div className="flex justify-end">
+        <button
+          onClick={toggleTheme}
+          className="mb-4 px-4 py-2 rounded bg-gray-300 dark:bg-gray-700 text-black dark:text-white hover:bg-gray-400 dark:hover:bg-gray-600 transition"
+        >
+          Toggle {theme === "light" ? "🌙 Dark" : "☀️ Light"}
+        </button>
+      </div>
+
       <div className="w-full max-w-xl bg-white rounded-xl shadow-lg p-6">
         <h1 className="text-3xl font-bold text-center mb-6 text-purple-700">
           Expense Tracker
         </h1>
 
         <div className="text-xl font-medium text-center mb-4">
-          Your Balance: <span className="font-bold text-blue-600">{formatCurrency(bal)}</span>
-
+          Your Balance:{" "}
+          <span className="font-bold text-blue-600">{formatCurrency(bal)}</span>
         </div>
 
         <div className="flex justify-between mb-6 bg-gray-50 p-4 rounded-md shadow-sm">
           <div className="text-green-600 font-semibold">
-            Income:{ formatCurrency(income)}
+            Income:{formatCurrency(income)}
           </div>
           <div className="text-red-600 font-semibold">
             Expense:{formatCurrency(expense)}
