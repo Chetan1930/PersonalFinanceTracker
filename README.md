@@ -6,8 +6,8 @@ Track your income and expenses with ease! This is a simple yet powerful React-ba
 
 ## 🔗 Live Demo
 
-👉 [Visit the App](https://chetanexpense.netlify.app/)  
-🔗 [GitHub Repository](https://github.com/Chetan1930/PersonalFinanceTracker)
+👉 Visit the App: https://chetanexpense.netlify.app/ 
+🔗 GitHub Repository: https://github.com/Chetan1930/PersonalFinanceTracker
 
 ---
 
