@@ -89,9 +89,6 @@ This project is open-source and free to use.
 
 Thanks to the open-source community and tutorials that inspired this build!
 
----
-
 Made with ❤️ by [@Chetan1930](https://github.com/Chetan1930)
 
-```
 
